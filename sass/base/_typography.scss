@@ -1,7 +1,11 @@
-// add font properties here
+@font-face {
+    //font-family: openSansBold;
+    //src: url(assets/fonts/openSans/OpenSans-Bold.ttf) format("opentype");
+}
+
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     font-weight: 300;
     line-height: 1;
-    color: $color-grey-dark-3;
+    color: $color-black;
 }

@@ -1,51 +1,45 @@
-@mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-/*
-    MEDIA QUERY MANAGER
-0 - 600 px;         Phone
-601px - 900px;      Tablet portrait
-901px - 1200px;     Tablet landscape
-1201px - 1800px     Normal style
-1801px +            Big desktop
-
-    $breakpoint argument
-- phone
-- tab-port
-- tab-land
-- big-desk
-
-    1em = 16px
-*/
-
+// MEDIA QUERIES CHANGES FONT-SIZE
 @mixin respond($breakpoint) {
+    // bootstrap xs
     @if $breakpoint==phone {
-        // 600px / 16 = 37.5
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 575.98px) {
             @content
-        };
+        }
+    ;
     }
+    // bootstrap sm
     @if $breakpoint==tab-port {
-        // 900px / 16 = 56.25
-        @media only screen and (max-width: 56.25em) {
+        @media only screen and (min-width: 576px) and (max-width: 767.98px) {
             @content
-        };
+        }
+    ;
     }
+    // bootstrap md
     @if $breakpoint==tab-land {
-        // 1200px / 16 = 75
-        @media only screen and (max-width: 75em) {
+        @media only screen and (min-width: 768px) and (max-width: 991.98px) {
             @content
-        };
+        }
+    ;
     }
-    @if $breakpoint==big-desk {
-        // 1800px / 16 = 112.5
-        @media only screen and (min-width: 112.5em) {
+    // bootstrap lg
+    @if $breakpoint==desk {
+        @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
             @content
-        };
+        }
+    ;
+    }
+    // bootstrap xl
+    @if $breakpoint==med-desk {
+        @media only screen and (min-width: 1200px) and (max-width: 1439.98px) {
+            @content
+        }
+    ;
+    }
+    // full HD displays
+    @if $breakpoint==big-desk {
+        @media only screen and (min-width: 1440px) {
+            @content
+        }
+    ;
     }
 }
