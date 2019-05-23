@@ -5,6 +5,7 @@ p,
 *::before {
     margin: 0;
     padding: 0;
+    font-weight: unset;
 }
 
 p,
@@ -34,16 +35,12 @@ html {
         // 992px - 1199.98px
         font-size: 93.75%; // 1rem = 15px
     }
-    @include respond(tab-land) {
+    @include respond(mobile-hd) {
         // 768px - 991.98px
         font-size: 87.5%; // 1rem = 14px
     }
-    @include respond(tab-port) {
+    @include respond(mobile) {
         // 576 - 767.98px
         font-size: 81.3%; // 1rem = 16 x 0.813 = 13px
-    }
-    @include respond(phone) {
-        // width < 575.98px
-        font-size: 75%; // 1rem = 16 x 0.75 = 12px
     }
 }
