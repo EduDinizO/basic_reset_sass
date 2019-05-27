@@ -1,52 +1,43 @@
 // MEDIA QUERIES CHANGES FONT-SIZE
 @mixin respond($breakpoint) {
-    // Mobile small
-    @if $breakpoint==mobile {
+    // bootstrap xs
+    @if $breakpoint==mobile-small {
         @media only screen and (max-width: 575px) {
             @content
-        }
-    ;
+        };
     }
-    // Mobile HD
-    @if $breakpoint==mobile-hd {
+    // bootstrap sm
+    @if $breakpoint==mobile {
         @media only screen and (min-width: 576px) and (max-width: 768px) {
             @content
-        }
-    ;
+        };
     }
-    // Mobile Full HD
-    @if $breakpoint==mobile-full {
-        @media only screen and (min-width: 1000px) and (max-width: 1100px) and (min-height: 1900px){
+    // bootstrap md
+    @if $breakpoint==tablet {
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
             @content
-        }
-    ;
+        };
     }
-    // Desktop 1024 x 768
-    @if $breakpoint==desk {
-        @media only screen and (min-width: 769px) and (max-width: 1200px) {
+    // bootstrap lg
+    @if $breakpoint==desktop {
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
             @content
-        }
-    ;
+        };
     }
-    // Desktop 1280 x 1024 or 1280 x 800
-    @if $breakpoint==med-desk {
-        @media only screen and (min-width: 1201px) and (max-width: 1300px) {
+    // bootstrap xl +
+    @if $breakpoint==desktop-medium {
+        @media only screen and (min-width: 1200px) and (max-width: 1439px) {
             @content
-        }
-    ;
+        };
     }
-    // Desktop HD 1366 x 768
-    @if $breakpoint==big-desk {
-        @media only screen and (min-width: 1301px) and  (max-width: 1400px) {
+    @if $breakpoint==desktop-large {
+        @media only screen and (min-width: 1440px) and (max-width: 1919px) {
             @content
-        }
-    ;
+        };
     }
-    // Desktop Full HD 1920 x 1080
-    @if $breakpoint==full-hd {
-        @media only screen and (min-width: 1401px) {
+    @if $breakpoint==desktop-full-hd {
+        @media only screen and (min-width: 1920px) {
             @content
-        }
-    ;
+        };
     }
 }
